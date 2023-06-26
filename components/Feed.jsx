@@ -60,6 +60,14 @@ const Feed = () => {
           required
           className="search_input peer"
         />
+        {searchText && (
+          <div
+            className="absolute right-4 cursor-pointer"
+            onClick={() => setSearchText("")}
+          >
+            <i class="ri-close-line"></i>
+          </div>
+        )}
       </form>
 
       <PromptCardList
